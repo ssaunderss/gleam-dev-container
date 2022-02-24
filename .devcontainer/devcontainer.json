@@ -1,0 +1,15 @@
+{
+    "name": "gleam-devcontainer",
+    "dockerComposeFile": ["docker-compose.yml"],
+    "workspaceFolder": "/workspace/gleam-dev",
+    "service": "gleam_dev",
+    "extensions": [
+		"eamodio.gitlens",
+		"streetsidesoftware.code-spell-checker",
+		"gleam.gleam"
+	],
+    "onCreateCommand": "gleam --version",
+    // "postCreateCommand": "./.devcontainer/setup.sh",
+    "forwardPorts": [4000],
+    "shutdownAction": "stopCompose"
+  }

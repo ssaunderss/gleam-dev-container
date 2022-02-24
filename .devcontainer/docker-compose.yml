@@ -1,0 +1,12 @@
+version: "3.6"
+
+services:
+  gleam_dev:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    environment:
+      MIX_ENV: dev
+    volumes:
+      - ../:/workspace/gleam-dev
+    command: bash -c "sleep infinity"
